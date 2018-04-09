@@ -43,6 +43,16 @@ class Fraction:
          secondnum = other.num * self.den
          return firstnum == secondnum
 
+     def __lt__(self, other):
+         firstnum = self.num * other.den
+         secondnum = other.num * self.den
+         return firstnum < secondnum
+
+     def __gt__(self, other):
+         firstnum = self.num * other.den
+         secondnum = other.num * self.den
+         return firstnum > secondnum
+
 def gcd(m,n):
     while m%n != 0:
         oldm = m
